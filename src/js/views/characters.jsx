@@ -40,7 +40,7 @@ const TodoList = () => {
                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div className="icons">
                           <div>
-                        <Link to="/">
+                        <Link to="/description">
                         <button type="button" className="btn btn-outline-primary">Learn more!</button>
                         </Link>
                         </div>

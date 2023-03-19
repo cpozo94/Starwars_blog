@@ -9,6 +9,7 @@ import TodoList from "./views/characters.jsx";
 import TodoCheck from "./views/todoChecks.jsx";
 import Planets from "./views/planets.jsx";
 import Detail from "./views/detail.jsx";
+import Description from "./views/description.jsx";
 import injectContext from "./store/appContext";
 
 
@@ -32,7 +33,8 @@ const Layout = () => {
 							<Planets />
 							</div>}/>
 						<Route path="/check" element={<TodoCheck />} />
-						<Route path="/detail/:title/:description" element={<Detail />} />
+
+						<Route path="/description" element={<Description />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
