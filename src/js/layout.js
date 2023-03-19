@@ -5,7 +5,11 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import TodoList from "./views/todolist.jsx";
+import TodoCheck from "./views/todoChecks.jsx";
+import Detail from "./views/detail.jsx";
 import injectContext from "./store/appContext";
+
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -22,9 +26,9 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/" element={<TodoList />} />
+						<Route path="/check" element={<TodoCheck />} />
+						<Route path="/detail/:title/:description" element={<Detail />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

@@ -1,0 +1,24 @@
+li {
+    list-style:none;
+}
+h1{
+    color:red;
+}
+
+.list-container {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .list {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 18rem;
+  }
+  
