@@ -11,12 +11,12 @@ export const Navbar = () => {
 			</Link>
 			
 						
-			<div class="btn-group">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+			<div className="btn-group">
+				<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				Favorites
 				</button>
-				<ul class="dropdown-menu">
-				<li><a class="dropdown-item" href="#">Favorites</a></li>
+				<ul className="dropdown-menu">
+				<li><a className="dropdown-item" href="#">Favorites</a></li>
 				</ul>
 			</div>
 
