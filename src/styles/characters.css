@@ -5,11 +5,12 @@ h1{
     color:red;
 }
 
-.list-container {
+.alllist {
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    
   }
   
   .list {

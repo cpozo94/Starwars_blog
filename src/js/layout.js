@@ -5,8 +5,9 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import TodoList from "./views/todolist.jsx";
+import TodoList from "./views/characters.jsx";
 import TodoCheck from "./views/todoChecks.jsx";
+import Planets from "./views/planets.jsx";
 import Detail from "./views/detail.jsx";
 import injectContext from "./store/appContext";
 
@@ -26,7 +27,10 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
-						<Route path="/" element={<TodoList />} />
+						<Route path="/" element={<div>
+							<TodoList /> 
+							<Planets />
+							</div>}/>
 						<Route path="/check" element={<TodoCheck />} />
 						<Route path="/detail/:title/:description" element={<Detail />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
