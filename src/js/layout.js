@@ -34,7 +34,7 @@ const Layout = () => {
 							</div>}/>
 						<Route path="/check" element={<TodoCheck />} />
 
-						<Route path="/description" element={<Description />} />
+						<Route path="/detail/:index" element={<Description />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

@@ -15,13 +15,13 @@ const TodoList = () => {
     async function fetchData() {
       const response = await fetch('https://www.swapi.tech/api/people');
       const data = await response.json();
-      setPeople(data.results.slice(0, 10)); // get the first 10 people
+      setPeople(data.results.slice(0, 10)); // 10 primeros personajes
     }
     fetchData();
   }, []);
 
-  const handleClick = (person) => {
-    navigate(`/detail/${person.name}/${person.url}`);
+  const handleClick = (index) => {
+    navigate(`/detail/${index}`);
   };
 
   return (
@@ -40,8 +40,8 @@ const TodoList = () => {
                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div className="icons">
                           <div>
-                        <Link to="/description">
-                        <button type="button" className="btn btn-outline-primary">Learn more!</button>
+                        <Link to="/description/:id">
+                        <button type="button" className="btn btn-outline-primary" onClick={() => handleClick(person)}>Learn more!</button>
                         </Link>
                         </div>
                         <div>

@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Description = () => {
+  const { id } = useParams(); // extract the URL parameter
 
-    return (
-<div className="container">
-        <div className="image">
-          <img src="https://source.unsplash.com/random/350x350/?soccer" alt="your-image" />
-        </div>
-        <div className="text p-4">
-            <h2 className="text-center">prueba</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a orci at augue tincidunt facilisis. Nulla quis fringilla mauris, in iaculis massa. Ut ut dictum nulla, vel ultricies metus. Phasellus vel ante tempor, venenatis dolor nec, efficitur lectus. Sed blandit massa nunc, ut tempus nunc euismod vitae. Fusce blandit pharetra.</p>
-        </div>
-        <footer className="footer mt-3">Your footer text here</footer>
+  const [person, setPerson] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`https://www.swapi.tech/api/people/${id}`);
+      const data = await response.json();
+      setPerson(data.result.properties);
+    }
+    fetchData();
+  }, [id]);
+
+  return (
+    <div className="container">
+      <div className="image">
+        <img src={`https://starwars-visualguide.com/assets/img/characters/${index}.jpg`} alt={character.name} />
       </div>
-
-
-
-
-
-    )
-}
+      <div className="text p-4">
+        <h2 className="text-center">{character.name}</h2>
+      
+      </div>
+      <footer className="footer mt-3">Your footer text here</footer>
+    </div>
+  );
+};
 
 export default Description;
